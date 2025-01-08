@@ -9,12 +9,13 @@
         ":rebaseStalePrs",
         ":semanticCommitsDisabled",
         ":separateMajorReleases",
+        ":approveMajorUpdates",
         ":combinePatchMinorReleases",
         ":enableVulnerabilityAlerts",
-        ":timezone(UTC)",
+        ":timezone(Europe/Copenhagen)",
         ":gitSignOff",
         ":label(renovate)",
-        "group:allNonMajor"
+        "group:allNonMajor"        
     ],
     "commitBodyTable": true,
     "lockFileMaintenance": {"enabled": true, "extends": ["schedule:daily"]},
