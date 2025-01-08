@@ -22,7 +22,7 @@
     "rollbackPrs": true,
     "packageRules": [
         {"matchUpdateTypes": ["major"], "enabled": false},
-        {"matchUpdateTypes": ["minor", "patch", "digest"]},
+        {"matchUpdateTypes": ["minor", "patch", "digest"], "enabled": true},
         {"matchDepTypes": ["require"], "rangeStrategy": "widen"}
     ],
     "vulnerabilityAlerts": {
