@@ -269,7 +269,7 @@ jobs:
           docker compose run --rm node yarn build
 
   changelog:
-    if: github.actor != 'renovate'
+    if: github.actor != 'renovate[bot]'
     runs-on: ubuntu-latest
     name: Changelog should be updated
     strategy:
