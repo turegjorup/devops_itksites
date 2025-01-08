@@ -12,6 +12,7 @@
         ":enableVulnerabilityAlerts",
         ":timezone(Europe/Copenhagen)",
         ":label(renovate)",
+        ":preserveSemverRanges",
         "group:symfony"     
     ],
     "commitBodyTable": true,
@@ -21,7 +22,7 @@
     "rangeStrategy": "replace",
     "rollbackPrs": true,
     "packageRules": [
-        {"matchUpdateTypes": ["major"], "enabled": false},
+        {"matchUpdateTypes": ["major"], "enabled": enabled},
         {"matchUpdateTypes": ["minor", "patch", "digest"], "enabled": true},
         {"matchDepTypes": ["require"], "rangeStrategy": "widen"}
     ],
