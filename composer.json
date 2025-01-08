@@ -89,6 +89,9 @@
             "symfony/runtime": true
         },
         "optimize-autoloader": true,
+        "platform": {
+            "php": "8.3.99"
+        },
         "preferred-install": {
             "*": "dist"
         },
