@@ -21,6 +21,7 @@
     "rangeStrategy": "replace",
     "rollbackPrs": true,
     "packageRules": [
+        {"matchUpdateTypes": ["major"], "enabled": false},
         {"matchUpdateTypes": ["minor", "patch", "digest"]},
         {"matchDepTypes": ["require"], "rangeStrategy": "widen"}
     ],
