@@ -7,15 +7,12 @@
         ":automergeMinor",
         ":automergeBranch",
         ":rebaseStalePrs",
-        ":semanticCommitsDisabled",
-        ":separateMajorReleases",
         ":approveMajorUpdates",
         ":combinePatchMinorReleases",
         ":enableVulnerabilityAlerts",
         ":timezone(Europe/Copenhagen)",
-        ":gitSignOff",
         ":label(renovate)",
-        "group:symfony"     
+        ":group:symfony"     
     ],
     "commitBodyTable": true,
     "lockFileMaintenance": {"enabled": true, "extends": ["schedule:daily"]},
