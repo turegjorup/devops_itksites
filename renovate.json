@@ -12,7 +12,7 @@
         ":enableVulnerabilityAlerts",
         ":timezone(Europe/Copenhagen)",
         ":label(renovate)",
-        ":group:symfony"     
+        "group:symfony"     
     ],
     "commitBodyTable": true,
     "lockFileMaintenance": {"enabled": true, "extends": ["schedule:daily"]},
