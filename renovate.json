@@ -24,9 +24,7 @@
         "automerge": true,
         "automergeType": "pr",
         "minimumReleaseAge": "0 days",
-        "prPriority": 10,
-        "commitMessagePrefix": "security:",
-        "matchBaseBranches": ["main"]
+        "commitMessagePrefix": "security:"
     },
     "osvVulnerabilityAlerts": true,
 
@@ -35,17 +33,28 @@
         "schedule": ["before 6am on Monday"],
         "automerge": true,
         "automergeType": "pr",
-        "commitMessageAction": "Refresh",
-        "matchBaseBranches": ["main"]
+        "commitMessageAction": "Refresh"
     },
 
-    "composer": { "enabled": true, "ignorePlatformReqs": [] },
+    "composer": { "enabled": true },
     "npm": { "enabled": true },
     "github-actions": { "enabled": true, "pinDigests": true },
     "docker-compose": { "enabled": true, "pinDigests": true },
     "dockerfile": { "enabled": true, "pinDigests": true },
 
     "packageRules": [
+        {
+            "description": "Vulnerability alerts: high priority on main",
+            "matchBaseBranches": ["main"],
+            "isVulnerabilityAlert": true,
+            "prPriority": 10
+        },
+        {
+            "description": "Vulnerability alerts: do not raise against develop (handled on main)",
+            "matchBaseBranches": ["develop"],
+            "isVulnerabilityAlert": true,
+            "enabled": false
+        },
         {
             "description": "Hotfix: auto-merge patches/digests/lockfile on main after 7-day soak",
             "matchBaseBranches": ["main"],
