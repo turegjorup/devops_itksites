@@ -7,7 +7,7 @@
         ":maintainLockFilesWeekly",
         "schedule:weekdays"
     ],
-    "baseBranches": ["main", "develop"],
+    "baseBranchPatterns": ["main", "develop"],
     "timezone": "Europe/Copenhagen",
     "labels": ["dependencies", "renovate"],
     "prConcurrentLimit": 5,
@@ -96,21 +96,21 @@
         {
             "description": "Group Symfony patches into one PR on main",
             "matchBaseBranches": ["main"],
-            "matchPackagePatterns": ["^symfony/"],
+            "matchPackageNames": ["symfony/**"],
             "matchUpdateTypes": ["patch"],
             "groupName": "symfony (patch)"
         },
         {
             "description": "Group Doctrine patches on main",
             "matchBaseBranches": ["main"],
-            "matchPackagePatterns": ["^doctrine/"],
+            "matchPackageNames": ["doctrine/**"],
             "matchUpdateTypes": ["patch"],
             "groupName": "doctrine (patch)"
         },
         {
             "description": "Group api-platform patches on main",
             "matchBaseBranches": ["main"],
-            "matchPackagePatterns": ["^api-platform/"],
+            "matchPackageNames": ["api-platform/**"],
             "matchUpdateTypes": ["patch"],
             "groupName": "api-platform (patch)"
         },
