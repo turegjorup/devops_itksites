@@ -47,7 +47,7 @@
         "ergebnis/composer-normalize": "^2.23",
         "friendsofphp/php-cs-fixer": "^3.6",
         "hautelook/alice-bundle": "^2.14",
-        "justinrainbow/json-schema": "^6.0",
+        "justinrainbow/json-schema": "^6.1.0",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1",
         "phpstan/phpstan-doctrine": "^2.0",
