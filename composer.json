@@ -17,7 +17,7 @@
         "itk-dev/openid-connect-bundle": "^4.0",
         "itk-dev/vault-bundle": "^1.0.0",
         "nelmio/cors-bundle": "^2.2",
-        "ocramius/doctrine-batch-utils": "^2.8",
+        "ocramius/doctrine-batch-utils": "^2.9.0",
         "phpstan/phpdoc-parser": "^2.0",
         "symfony/amqp-messenger": "^8.0",
         "symfony/asset": "^8.0",
