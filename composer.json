@@ -46,7 +46,7 @@
     "require-dev": {
         "ergebnis/composer-normalize": "^2.23",
         "friendsofphp/php-cs-fixer": "^3.6",
-        "hautelook/alice-bundle": "^2.14",
+        "hautelook/alice-bundle": "^2.14.1",
         "justinrainbow/json-schema": "^6.0",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1",
