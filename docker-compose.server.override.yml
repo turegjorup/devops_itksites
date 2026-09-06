@@ -1,6 +1,6 @@
 services:
   rabbit:
-    image: rabbitmq:4-management-alpine
+    image: rabbitmq:4-management-alpine@sha256:ac1201d1dc227779d93c607f976e7f9156fd5b551ee5ff7946cab6c242091bf3
     restart: unless-stopped
     networks:
       - app
@@ -18,7 +18,7 @@ services:
       retries: 30
 
   supervisor:
-    image: itkdev/supervisor-php8.4:alpine
+    image: itkdev/supervisor-php8.4:alpine@sha256:e03a7ae707b83defdba16888a2e3f15d1c45b188af9c2f79db8a8d78b2aeec9c
     restart: unless-stopped
     stop_grace_period: 20s
     environment:
