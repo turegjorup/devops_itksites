@@ -8,7 +8,7 @@ networks:
 
 services:
   mariadb:
-    image: itkdev/mariadb:latest
+    image: itkdev/mariadb:latest@sha256:8044dd44965c85d96b28515f725e389670fa5bb17acc582b8d98aa6b186b8ed4
     networks:
       - app
     ports:
@@ -27,7 +27,7 @@ services:
       #- ENCRYPT=1 # Uncomment to enable database encryption.
 
   phpfpm:
-    image: itkdev/php8.4-fpm:latest
+    image: itkdev/php8.4-fpm:latest@sha256:3c91e2679d1361cefb1425858b5521878cf5f2e69a9ce05970baedfd7856e807
     user: ${COMPOSE_USER:-deploy}
     networks:
       - app
@@ -48,7 +48,7 @@ services:
       - .:/app
 
   nginx:
-    image: nginxinc/nginx-unprivileged:alpine
+    image: nginxinc/nginx-unprivileged:alpine@sha256:aa8c9087d36d93e9d650c5365f883b421e8214aedbad24ade52b844c583358f1
     networks:
       - app
       - frontend
@@ -77,7 +77,7 @@ services:
       - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}-metrics.middlewares=ITKMetricsAuth@file"
 
   mail:
-    image: axllent/mailpit
+    image: axllent/mailpit@sha256:98b916bd3c8d61f7633a52d3ea2f58d00620cb01ca57ab59edde68c347a95365
     networks:
       - app
       - frontend
@@ -92,7 +92,7 @@ services:
 
   # Code checks tools
   markdownlint:
-    image: itkdev/markdownlint
+    image: itkdev/markdownlint@sha256:8109f99d3e8e03a674eb85605f8f4ecacf84bb22ba17cba30dc1d243fd499eca
     profiles:
       - dev
     volumes:
@@ -103,7 +103,7 @@ services:
     # https://github.com/prettier/prettier/issues/15206) have an official
     # docker image.
     # https://hub.docker.com/r/jauderho/prettier is good candidate (cf. https://hub.docker.com/search?q=prettier&sort=updated_at&order=desc)
-    image: jauderho/prettier
+    image: jauderho/prettier@sha256:a12203a911b251e8b9b7da2b4395ae5ffcea93d081735b9d3269b94a8f540e00
     profiles:
       - dev
     volumes:
