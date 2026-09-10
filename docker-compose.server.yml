@@ -8,7 +8,7 @@ networks:
 
 services:
   phpfpm:
-    image: itkdev/php8.4-fpm:alpine
+    image: itkdev/php8.4-fpm:alpine@sha256:b63e98093426748efee2754de5b84f8bde74ec2706c4daf388ae1098184bd650
     restart: unless-stopped
     networks:
       - app
@@ -21,7 +21,7 @@ services:
       - .:/app
 
   nginx:
-    image: nginxinc/nginx-unprivileged:alpine
+    image: nginxinc/nginx-unprivileged:alpine@sha256:2ddec616f1cb58bcac057aa388f28cb81e35137641ef4226d321714499329bd1
     restart: unless-stopped
     networks:
       - app

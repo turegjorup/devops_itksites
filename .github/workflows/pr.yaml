@@ -8,7 +8,7 @@ jobs:
         name: Validate Doctrine Schema
         steps:
             - name: Checkout
-              uses: actions/checkout@v6
+              uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
             - name: Create docker network
               run: docker network create frontend
@@ -26,7 +26,7 @@ jobs:
         name: PHPStan
         steps:
             - name: Checkout
-              uses: actions/checkout@v6
+              uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
             - name: Create docker network
               run: docker network create frontend
@@ -41,7 +41,7 @@ jobs:
         name: PHP Unit tests
         steps:
             - name: Checkout
-              uses: actions/checkout@v6
+              uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
             - name: Create docker network
               run: docker network create frontend
@@ -56,7 +56,7 @@ jobs:
                   docker compose exec -e XDEBUG_MODE=coverage phpfpm vendor/bin/phpunit --coverage-clover=coverage/unit.xml
 
             - name: Upload coverage to Codecov
-              uses: codecov/codecov-action@v5
+              uses: codecov/codecov-action@0fb7174895f61a3b6b78fc075e0cd60383518dac # v5
               with:
                   token: ${{ secrets.CODECOV_TOKEN }}
                   files: ./coverage/unit.xml
@@ -68,7 +68,7 @@ jobs:
         name: Load fixtures
         steps:
             - name: Checkout
-              uses: actions/checkout@v6
+              uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
             - name: Create docker network
               run: docker network create frontend
@@ -85,7 +85,7 @@ jobs:
         name: Build assets
         steps:
             - name: Checkout
-              uses: actions/checkout@v6
+              uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
             - name: Create docker network
               run: docker network create frontend
