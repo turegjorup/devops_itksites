@@ -1,6 +1,6 @@
 services:
   rabbit:
-    image: rabbitmq:4-management-alpine
+    image: rabbitmq:4-management-alpine@sha256:b3b8b7f95f5382a19f9ea33540e604f30aad081d37ad9aba72255135765373a1
     networks:
       - app
       - frontend
@@ -19,7 +19,7 @@ services:
   node:
     profiles:
       - dev
-    image: node:24
+    image: node:24@sha256:6dac556d980b7f0e5498d08f08cee0ca67798b4ad6c23964a9214920e67758d0
     volumes:
       - .:/app
     working_dir: /app
